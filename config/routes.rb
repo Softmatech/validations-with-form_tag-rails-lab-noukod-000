@@ -3,6 +3,12 @@ Rails.application.routes.draw do
   post "/authors", to: "authors#create"
   get "/authors/:id" to: "authors#show", as: "author"
   get "/authors/:id/edit", to: "authors#edit", as: "edit_authors"
+  patch "/authors/:id", to: "authors#update"
+
+  get "/posts/new", to: "posts#new", as: "new_post"
+  post "/posts", to: "posts#create"
+  get "/posts/:id", to: "posts#create"
+  get "posts/:id/edit", to: "posts#edit", as: "edit_post"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
